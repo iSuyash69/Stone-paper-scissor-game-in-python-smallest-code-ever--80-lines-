@@ -3,6 +3,7 @@
 
 import math
 import random
+import time
 
 def game():
     print("\n\n------------------------STONE-PAPER-SCISSOR GAME--------------------------")
@@ -15,6 +16,7 @@ def game():
     r=0             #To count the no. of rounds
     user1=0         #To track the score of user
     comp3=0         #To track the score of computer
+
     while x!=5:
         x+=1    
         r+=1
@@ -32,32 +34,43 @@ def game():
         computer=[1,2,3]
         comp2=random.choice(computer)
         if comp2==1:
-            print(f" Computer chose: STONE\n")
+            print(f" Computer chose:",end="") 
+            time.sleep(0.86)
+            print(f"STONE\n")
         elif comp2==2:
-            print(f" Computer chose: PAPER\n")
+            print(f" Computer chose:",end="")
+            time.sleep(0.86)
+            print(f"PAPER\n")
         elif comp2==3:
-            print(f" Computer chose: SCISSOR\n")
+            print(f" Computer chose:",end="")
+            time.sleep(0.86)
+            print(f"SCISSOR\n")
 
         if user==comp2:
+            time.sleep(0.86)
             print("\n\tIt's a DRAW")
             print(f"SCORE: {player}-{user1}  |  COMPUTER-{comp3}")
         elif user==1 and comp2==3:
+            time.sleep(0.86)
             print("\n\tYou WON")
             user1+=1
             print(f"SCORE: {player}-{user1}  |  COMPUTER-{comp3}") 
         elif user==2 and comp2==1:
+            time.sleep(0.86)
             print("\n\tYou WON")
             user1+=1
             print(f"SCORE: {player}-{user1}  |  COMPUTER-{comp3}") 
         elif user==3 and comp2==2:
+            time.sleep(0.86)
             print("\n\tYou WON")
             user1+=1
             print(f"SCORE: {player}-{user1}  |  COMPUTER-{comp3}")    
         else:
+            time.sleep(0.86)
             print("\n\tYou LOST")
             comp3+=1
             print(f"SCORE: {player}-{user1}  |  COMPUTER-{comp3}")
-        
+
     if user1>comp3:
         print("\n\nCongrats!! YOU WON THE GAME")
     elif user1<comp3:
@@ -74,8 +87,4 @@ def game():
     
 
 game()
-
-
-
-
 
