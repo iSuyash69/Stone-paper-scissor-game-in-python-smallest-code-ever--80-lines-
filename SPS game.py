@@ -1,5 +1,6 @@
 #Stone paper scissor game in python
-#Made by - Suyash Deshpande 
+#Made by - Suyash Deshpande  
+#Play with your peers ! Enjoy 
 
 import math
 import random
